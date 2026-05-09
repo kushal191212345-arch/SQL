@@ -1,1 +1,16 @@
-
+#solving simple problem on sql
+create database xyz;
+use xyz;
+create table employee(
+	id int primary key,
+    name varchar(20),
+    salary int(10)
+);
+select * from employee;
+insert into employee
+(id,name,salary)
+values
+(1,"adam",25000),
+(2,"bob",35000),
+(3,"casey",45000);
+select * from employee;
