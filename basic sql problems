@@ -14,3 +14,26 @@ values
 (2,"bob",35000),
 (3,"casey",45000);
 select * from employee;
+
+#arranging company employee data 
+create database company;
+use company;
+create table kushal(
+	id int primary key,
+    name varchar(500),
+    salary varchar(10),
+    date_of_joining varchar(20),
+    date_of_salary varchar(20)
+);
+select * from kushal;
+insert into kushal
+(id,name,salary,date_of_joining,date_of_salary)
+values
+(1,"adam",25000,"19/12",30),
+(2,"bob",35000,"4/11",21),
+(3,"casey",45000,"3/12",13),
+(4,"Kushal",250000,"3/4",5),
+(5,"Hema",240000,"5/4",14),
+(6,"Kalpashree",25000,"3/5",5);
+
+select * from kushal;
