@@ -36,8 +36,19 @@ values
 (5,"Hema",240000,"5/4",14),
 (6,"Kalpashree",25000,"3/5",5);
 
-select salary 
-from kushal
-where salary>40000
-order by asc
-;
+select salary from kushal where salary>40000 order by asc;
+
+_______________________________________________________________________________________________
+
+
+**Database: `students(id, name, age, marks, department)`**
+create database college;
+use college;
+create table student;
+(id int primary key,
+ name varchar(20),
+ age int(2),
+ marks int,
+ department varchar(10)
+);
+
