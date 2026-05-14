@@ -51,18 +51,30 @@ create table student;
  marks int,
  department varchar(10)
 );
+insert into student(id,name,age,marks,department)
+values
+(1,"Kushal",19,20,"cse"),
+(2,"hema",20,22,"ece"),
+(3,"manju",21,25,"cse"),
+(4,"kalpashree",20,24,"eee"),
+(5,"raksha",22,23,"cse");
+
 
 **1.** Fetch all students from the `CSE` department.
+select * from student where department = "cse"
 
 **2.** Find the names of students who scored more than 75 marks.
+select * from student where marks > 75
 
 **3.** Count the total number of students in each department.
+select count(department) from student
 
 **4.** Find the student with the highest marks.
+select max(marks) from student 
 
 **5.** List all students sorted by marks in descending order.
 
----
+
 
 **Database: `employees(emp_id, name, salary, department, hire_date)`**
 
