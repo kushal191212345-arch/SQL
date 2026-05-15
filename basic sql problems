@@ -61,20 +61,19 @@ values
 
 
 **1.** Fetch all students from the `CSE` department.
-select * from student where department = "cse"
+select * from student where department = "cse";
 
 **2.** Find the names of students who scored more than 75 marks.
-select * from student where marks > 75
+select * from student where marks > 75;
 
 **3.** Count the total number of students in each department.
-select count(department) from student
+select count(department) from student;
 
 **4.** Find the student with the highest marks.
-select max(marks) from student 
+select max(marks) from student ;
 
 **5.** List all students sorted by marks in descending order.
-
-
+select marks from students order by desc;
 
 **Database: `employees(emp_id, name, salary, department, hire_date)`**
 
