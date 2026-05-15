@@ -76,6 +76,14 @@ select max(marks) from student ;
 select marks from students order by desc;
 
 **Database: `employees(emp_id, name, salary, department, hire_date)`**
+create a database company;
+use company;
+create table employees
+(emp_id int primary key,
+name varchar(50),
+salary int,
+department varchar(50),
+hire_date int);
 
 **6.** Fetch all employees whose salary is between 30,000 and 60,000.
 
