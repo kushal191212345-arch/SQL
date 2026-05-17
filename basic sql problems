@@ -103,18 +103,37 @@ select name from employees order by salary desc limit 3;
 ---
 
 **Database: `orders(order_id, customer_id, product, quantity, price)`**
+create database swiggy;
+use swiggy;
+create table order
+(order_id int primary key,
+customer_id int(10),
+product varchar(100),
+quantity int(3),
+price float(10));
 
 **11.** Find the total revenue (quantity × price) for each product.
+alter table order
+add column total_revenue int;
+
+select total_revenue from swiggy 
+where total_revenue = quantity * price;
 
 **12.** Fetch all orders where quantity is greater than 10.
+select product from swiggy having quantity > 10;
 
 **13.** Find the customer who placed the most orders.
+alter table swiggy
+add column orders int;
+select customer_id from (select quantity from swiggy) order by desc limit 1;
 
 **14.** List all distinct products that have been ordered.
+alter table swiggy
+add column distinct_product varchar(50);
+select distinct product from swiggy;
 
 **15.** Find the total number of orders placed by each customer.
+select count(orders) from swiggy;
 
----
 
-Want me to show the **solutions**, add **JOIN-based problems**, or create a **mini mock test** with a timer?
 
