@@ -76,6 +76,7 @@ select max(marks) from student ;
 select marks from students order by desc;
 
 **Database: `employees(emp_id, name, salary, department, hire_date)`**
+
 create a database company;
 use company;
 create table employees
@@ -86,14 +87,18 @@ department varchar(50),
 hire_date int);
 
 **6.** Fetch all employees whose salary is between 30,000 and 60,000.
+select name from employees where salary between 30000 and 60000;
 
 **7.** Find the average salary of each department.
-
+select avg(salary),department from employees group by department;
 **8.** List employees hired after January 1st, 2020.
+select name from employees havinig (hire_date = 1jan2020);
 
 **9.** Find departments where the average salary is greater than 50,000.
+select department from employees where salary > (select avg(salary) from employees);
 
 **10.** Fetch the names of the top 3 highest-paid employees.
+select name from employees order by salary desc limit 3;
 
 ---
 
