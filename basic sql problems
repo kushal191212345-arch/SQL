@@ -134,6 +134,57 @@ select distinct product from swiggy;
 
 **15.** Find the total number of orders placed by each customer.
 select count(orders) from swiggy;
+_______________________________________________________________________________________________________
+
+Given an Employees(id, name, salary, department) table, fetch all employees from the 'HR' department.
+create database company;
+use company;
+create table Employees
+(id int primary key,
+name varchar(50),
+salary int,
+department varchar(50);
+
+Find the total number of employees in each department.
+
+select count(name) from employee;
+
+List all employees sorted by salary in descending order.
+
+select name from employee order by desc;
+
+Find employees whose name starts with 'A'.
+
+select name from employee having A;
+
+Find the maximum and minimum salary in the company.
+select max(salary) from company;
+select min(salary) from company;
 
 
+Level 2 — Intermediate
+
+Find the second highest salary from the Employees table.
+List departments where the average salary > 50000.
+Find all employees who do not have a manager (assume a manager_id column, NULL means no manager).
+Given Orders(order_id, customer_id, amount, order_date), find customers who placed more than 3 orders.
+Find employees whose salary is above the company average.
+
+
+Level 3 — Joins
+
+Given Employees(id, name, dept_id) and Departments(dept_id, dept_name), fetch each employee's name along with their department name.
+Find employees who do not belong to any department (use LEFT JOIN).
+Given Students(id, name) and Marks(student_id, subject, marks), find students who scored above 80 in every subject.
+Find pairs of employees who work in the same department.
+
+
+Level 4 — Advanced
+
+Rank employees within each department by salary using RANK().
+Find the running total of order amounts ordered by date.
+Find the Nth highest salary (generalize for any N).
+Given a Transactions(id, user_id, type, amount) table where type is 'credit' or 'debit', find the net balance for each user.
+Delete duplicate rows from a table, keeping only one copy.
+Find customers who placed orders in every month of 2024.
 
