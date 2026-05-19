@@ -182,8 +182,24 @@ select id from employee
 join manager_id
 on employee.id = employee.manager_id;
 
-Given Orders(order_id, customer_id, amount, order_date), find customers who placed more than 3 orders.
+Given Orders(order_id, customer_id, amount, order_date), 
+create database zomato;
+use zomato;
+create table Orders
+(order_id int primary key,
+customer_id int,
+amount int,
+order_date int);
+
+find customers who placed more than 3 orders.
+alter table Orders
+add column order int;
+select customer_id from Orders
+where order > 3;
 Find employees whose salary is above the company average.
+
+select name from employee
+where salary > (select avg(salary) from employee);
 
 
 Level 3 — Joins
