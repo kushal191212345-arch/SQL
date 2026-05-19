@@ -165,8 +165,23 @@ select min(salary) from company;
 Level 2 — Intermediate
 
 Find the second highest salary from the Employees table.
+select max(salary) from employee
+where salary<(select max(salary) from employee);
+
 List departments where the average salary > 50000.
+
+alter table employee
+add column avg_salary>50000;
+
+select departments from table 
+where salary > (select salary from employee);
+
 Find all employees who do not have a manager (assume a manager_id column, NULL means no manager).
+
+select id from employee
+join manager_id
+on employee.id = employee.manager_id;
+
 Given Orders(order_id, customer_id, amount, order_date), find customers who placed more than 3 orders.
 Find employees whose salary is above the company average.
 
