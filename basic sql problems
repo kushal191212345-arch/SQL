@@ -200,11 +200,20 @@ Find employees whose salary is above the company average.
 
 select name from employee
 where salary > (select avg(salary) from employee);
+____________________________________________________________________________________________________
+create database company;
+use company;
+create table Employees
+(id int primary key,
+name varchar(50),
+dept_id int );
 
+Create table Departments
+(dept_id int primary key,
+dept_name varchar(50));
 
-Level 3 — Joins
+fetch each employee's name along with their department name
 
-Given Employees(id, name, dept_id) and Departments(dept_id, dept_name), fetch each employee's name along with their department name.
 Find employees who do not belong to any department (use LEFT JOIN).
 Given Students(id, name) and Marks(student_id, subject, marks), find students who scored above 80 in every subject.
 Find pairs of employees who work in the same department.
