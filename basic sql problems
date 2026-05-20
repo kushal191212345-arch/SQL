@@ -223,9 +223,31 @@ select name from Employees
 left join Departments
 on Employees.name != Departments.dept_name;
 
-Given Students(id, name) and Marks(student_id, subject, marks), find students who scored above 80 in every subject.
-Find pairs of employees who work in the same department.
+Given Students(id, name) and Marks(student_id, subject, marks)
+create database college;
+use college;
+create table Students
+(id int primary key,
+name varchar(50));
 
+create table Marks
+(student_id 
+Forgien key Marks(student_id) reference Students(id),
+subject varchar(50),
+marks int);
+
+find students who scored above 80 in every subject.
+
+select id,name from Students
+inner join Marks
+on Students.id,student.name = Marks.student_id
+where marks > 80;
+
+Find pairs of employees who work in the same department.
+select name from Employees 
+left join Departments
+on Employees.name = Departments.dept_name
+limit 2;
 
 Level 4 — Advanced
 
