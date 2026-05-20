@@ -135,8 +135,8 @@ select distinct product from swiggy;
 **15.** Find the total number of orders placed by each customer.
 select count(orders) from swiggy;
 _______________________________________________________________________________________________________
-
-Given an Employees(id, name, salary, department) table, fetch all employees from the 'HR' department.
+                                                
+Employees(id, name, salary, department) table, fetch all employees from the 'HR' department.
 create database company;
 use company;
 create table Employees
@@ -146,6 +146,7 @@ salary int,
 department varchar(50);
 
 Find the total number of employees in each department.
+
 
 select count(name) from employee;
 
@@ -213,8 +214,15 @@ Create table Departments
 dept_name varchar(50));
 
 fetch each employee's name along with their department name
+select name from Employees
+inner join Departments
+on Employees.name = Departments.dept_name;
 
 Find employees who do not belong to any department (use LEFT JOIN).
+select name from Employees
+left join Departments
+on Employees.name != Departments.dept_name;
+
 Given Students(id, name) and Marks(student_id, subject, marks), find students who scored above 80 in every subject.
 Find pairs of employees who work in the same department.
 
